@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **I. Test-First Development**: Are tests written before the implementation?
+- [ ] **II. Python 3.12+ with Type Hints**: Is the code using Python 3.12+ and have type hints?
+- [ ] **III. Clean and Readable Code**: Does the code adhere to SOLID, DRY, and KISS principles?
+- [ ] **IV. Document Decisions with ADRs**: Are significant architectural decisions documented with ADRs?
+- [ ] **V. Adherence to OOP Principles**: Does the code follow essential OOP principles?
 
 ## Project Structure
 

@@ -1,55 +1,84 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Calc Constitution
 
-## Core Principles
+<!-- 
+Sync Impact Report:
+- Version change: 1.0.0 → 1.1.0
+- List of modified principles: 
+  - V. Adherence to OOP Principles → V. Object-Oriented Programming (OOP) Principles
+- Added sections: Detailed explanations for OOP concepts (SOLID, DRY, KISS, Encapsulation, Inheritance, Polymorphism).
+- Removed sections: None
+- Templates requiring updates: None
+- Follow-up TODOs: None
+-->
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+## 1. Core Principles
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### I. Test-First Development (TDD)
+**Rule**: All new functionality must be preceded by a failing test. The Red-Green-Refactor cycle is to be strictly followed.
+**Rationale**: This ensures that all code is testable by design, reduces bugs, and provides a safety net for future refactoring.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Python 3.12+ with Strict Type Hints
+**Rule**: All code must be written for Python 3.12+ and include type hints for all function signatures, class members, and variables.
+**Rationale**: Type hints improve code clarity, allow for static analysis, and help prevent common runtime errors.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### III. Clean and Readable Code
+**Rule**: Code should be self-documenting, with clear naming conventions and logical structure. Complexity should be minimized.
+**Rationale**: Maintainable code is easy to understand, modify, and debug, reducing long-term development costs.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+#### Code Quality Standards:
+*   All functions must include type hints on parameters and return types.
+    *   Example: `def add(a: float, b: float) -> float:`
+*   All functions must include docstrings explaining what they do.
+    *   Example: `"""Add two numbers and return the sum."""`
+*   Follow PEP 8 naming conventions (lowercase_with_underscores for functions).
+*   Lines must be under 100 characters.
+*   No magic numbers; use named constants.
+    *   Bad: `if x > 10:`
+    *   Good: `if x > MAX_POWER_EXPONENT:`
 
-### [PRINCIPLE_6_NAME]
+### IV. Document Decisions with ADRs
+**Rule**: Significant architectural or technical decisions must be documented in an Architecture Decision Record (ADR).
+**Rationale**: ADRs provide a historical record of key decisions, their context, and their trade-offs, which is invaluable for onboarding and future architectural evolution.
 
+### V. Object-Oriented Programming (OOP) Principles
+**Rule**: The design of classes and objects must adhere to established OOP principles to ensure a modular, maintainable, and scalable architecture.
+**Rationale**: Following these principles leads to a system that is easier to extend, less prone to bugs, and more resilient to change.
 
-[PRINCIPLE__DESCRIPTION]
+#### Key OOP Concepts to Adhere To:
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+*   **SOLID**:
+    *   **S**ingle Responsibility Principle: A class should have only one reason to change.
+    *   **O**pen/Closed Principle: Software entities should be open for extension, but closed for modification.
+    *   **L**iskov Substitution Principle: Subtypes must be substitutable for their base types.
+    *   **I**nterface Segregation Principle: Clients should not be forced to depend on interfaces they do not use.
+    *   **D**ependency Inversion Principle: High-level modules should not depend on low-level modules. Both should depend on abstractions.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+*   **DRY (Don't Repeat Yourself)**: Avoid duplication of code. Abstract out common functionality into reusable components.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+*   **KISS (Keep It Simple, Stupid)**: Favor simple, straightforward solutions over complex ones. Avoid unnecessary complexity.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+*   **Encapsulation**: Bundle the data (attributes) and the methods that operate on the data into a single unit (a class). Restrict direct access to some of an object's components.
 
-## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+*   **Inheritance**: Allow a new class (subclass) to inherit properties and methods from an existing class (superclass). This promotes code reuse.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+*   **Polymorphism**: Allow objects of different classes to be treated as objects of a common superclass. This enables writing flexible and decoupled code.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+## 2. Technical Stack
+
+- **Language**: Python 3.12+
+- **Package Manager**: UV
+- **Testing Framework**: pytest
+- **Version Control**: Git
+
+## 3. Quality Requirements
+
+- **Test Coverage**: A minimum of 80% code coverage is required.
+- **Test Pass Rate**: 100% of tests must pass for a build to be considered successful.
+- **Data Structures**: Use dataclasses for plain data structures to ensure immutability and clarity.
+
+## 4. Governance
+
+- **Code Reviews**: All pull requests require at least one approving review from another team member before merging.
+- **Compliance**: All code must adhere to the principles and standards outlined in this constitution.
+
+**Version**: 1.2.0 | **Ratified**: 2025-11-12 | **Last Amended**: 2025-11-12
