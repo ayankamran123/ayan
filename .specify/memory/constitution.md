@@ -8,7 +8,7 @@ Sync Impact Report:
 - Added sections: Detailed explanations for OOP concepts (SOLID, DRY, KISS, Encapsulation, Inheritance, Polymorphism).
 - Removed sections: None
 - Templates requiring updates: None
-- Follow-up TODOs: None
+- Follow-up TODOs: None[Google](https://google.com)
 -->
 
 ## 1. Core Principles
