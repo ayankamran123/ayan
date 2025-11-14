@@ -8,7 +8,7 @@ Sync Impact Report:
 - Added sections: Detailed explanations for OOP concepts (SOLID, DRY, KISS, Encapsulation, Inheritance, Polymorphism).
 - Removed sections: None
 - Templates requiring updates: None
-- Follow-up TODOs: None[Google](https://google.com)
+- Follow-up TODOs: None
 -->
 
 ## 1. Core Principles
@@ -17,7 +17,7 @@ Sync Impact Report:
 **Rule**: All new functionality must be preceded by a failing test. The Red-Green-Refactor cycle is to be strictly followed.
 **Rationale**: This ensures that all code is testable by design, reduces bugs, and provides a safety net for future refactoring.
 
-### II. Python 3.12+ with Strict Type Hints
+### II. Python 3.12+ with Strict Type Hints [Google](https://google.com)
 **Rule**: All code must be written for Python 3.12+ and include type hints for all function signatures, class members, and variables.
 **Rationale**: Type hints improve code clarity, allow for static analysis, and help prevent common runtime errors.
 
